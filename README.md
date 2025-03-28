@@ -1,32 +1,69 @@
-### Açık Artırma Uygulaması ###
+# Açık Artırma Uygulaması
 
-Bu C programı, basit bir açık artırma simülasyonunu gerçekleştirmektedir. Kullanıcıya, farklı ürünler için teklif verme imkanı sunar ve sonunda en yüksek teklifi veren katılımcıları gösterir.
+Bu proje, bir açık artırma sistemini simüle eden basit bir C programıdır. Kullanıcılar belirli ürünler için teklif verebilir ve açık artırma sonunda en yüksek teklif veren kişi ürünü kazanır.
 
+## Açıklama
 
-## Kod Açıklaması
+- **baslangic()**: Açık artırma için varsayılan ürünleri ve başlangıç tekliflerini tanımlar.
+- **teklif_ver()**: Kullanıcının belirlediği ürüne teklif vermesini sağlar.
+- **son()**: Açık artırmayı sonlandırır ve kazanan teklifleri listeler.
 
-- `acik_artirma_ogesi` adında bir struct tanımlanmıştır. Bu, açık artırma öğelerini (ürün adı ve mevcut teklif) temsil eder.
-- `MAX_URUN_SAYISI` ve `BASLANGIC_TEKLIFI` sabit değişkenleri, sırasıyla maksimum ürün sayısını ve başlangıç teklifini belirtir.
-- `baslangic()` fonksiyonu, başlangıçta tanımlanan ürünlerin listesini ve başlangıç tekliflerini oluşturur.
-- `teklif_ver()` fonksiyonu, kullanıcı tarafından girilen teklifleri kontrol eder. Eğer yeni teklif, mevcut tekliften yüksekse kabul edilir.
-- `son()` fonksiyonu, açık artırma sonunda en yüksek teklif veren katılımcıları ekrana yazdırır.
-- `main()` fonksiyonu, kullanıcıya ürün seçme ve teklif verme imkanı sunar. Çıkış yapılmak istendiğinde veya tüm ürünler için teklifler tamamlandığında program sona erer.
+## Kullanılan Teknolojiler
 
+- C Programlama Dili
+- Standart Giriş/Çıkış İşlemleri
+- Struct Kullanımı
+- Döngüler ve Koşul Yapıları
 
-## Nasıl Kullanılır?
+## Kurulum
 
-1. **Başlangıç**
+1. Depoyu klonlayın:
+   ```bash
+   git clone https://github.com/kullanici_adiniz/acik-artirma.git
+   ```
+2. Klasöre gidin:
+   ```bash
+   cd acik-artirma
+   ```
+3. Derleme işlemi için GCC kullanın:
+   ```bash
+   gcc auction.c -o auction
+   ```
 
-    - Program başladığında, önceden tanımlanmış ürünler ve başlangıç teklifleri oluşturulur.
-    - Kullanıcıya açık artırma başladığı bildirilir.
+## Kullanım
 
-2. **Ürün Seçimi ve Teklif Verme**
+1. Programı çalıştırın:
+   ```bash
+   ./auction
+   ```
+2. Açık artırmaya katılmak için ekranda listelenen ürünlerden birine teklif verin.
+3. Teklifiniz mevcut tekliften yüksekse kabul edilir, değilse reddedilir.
+4. Çıkış yapmak için `0` seçeneğini kullanın.
+5. Açık artırma sona erdiğinde kazanan teklifler ekranda gösterilir.
 
-    - Kullanıcıya, açık artırmaya katılabileceği ürünler listelenir.
-    - Kullanıcı istediği ürünü seçer ve yeni bir teklif verir.
-    - Eğer teklif, mevcut tekliften yüksekse kabul edilir, aksi takdirde reddedilir.
+## Örnek Çalışma
 
-3. **Sonuçlar**
+**Çıktı Örneği:**
+```
+***** ACIK ARTIRMA UYGULAMASI *****
 
-    - Kullanıcı çıkış yapmak istediğinde veya tüm ürünler için teklifler tamamlandığında program sona erer.
-    - Açık artırma sonuçları, her ürün için en yüksek teklif veren katılımcıları gösterir.
+Hos geldiniz! Acik artirmaya basliyoruz.
+
+1 - Urun 1 icin teklif ver
+2 - Urun 2 icin teklif ver
+...
+0 - Cikis
+Lutfen seciminizi yapin: 1
+Yeni teklif miktarini girin: 1500
+Teklifiniz kabul edildi. Yeni teklif: 1500.00 $
+```
+
+## Geliştirme
+
+- Kullanıcı adı ve kayıt sistemi eklenerek daha gerçekçi bir açık artırma deneyimi sağlanabilir.
+- Ağ tabanlı çalışacak şekilde geliştirilerek birden fazla kullanıcının katılımı sağlanabilir.
+
+## Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır.
+
